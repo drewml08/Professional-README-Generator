@@ -1,5 +1,7 @@
 'use strict';
 
+var fs = require('fs');
+
 const inquirer = require('inquirer');
 
 const questions = [
@@ -47,7 +49,7 @@ const questions = [
     message: 'What are the testing instructions?',
     name: 'tests',
 },
-// Gitub Username 
+// Github Username 
 {
     type: 'input',
     message: 'What is your Github username?',
@@ -61,6 +63,34 @@ const questions = [
 },
 ];
 
-inquirer.prompt(questions).then((response) =>
-    console.log(response)
-);
+inquirer.prompt(questions).then((response) => {
+    var README = "";
+    README += "# " + response.project_name + "\n";
+    README += response.project_description + "\n";
+    README += "\n";
+
+    README += "## Installation \n" 
+    README += response.installation + "\n";
+    README += "\n";
+
+    README += "## Usage \n" 
+    README += response.usage + "\n";
+    README += "\n";
+
+    README += "## License \n" 
+    README += response.license + "\n";
+    README += "\n";
+
+    README += "## How to Contribute \n" 
+    README += response.contributing + "\n";
+    README += "\n";
+    
+    README += "## Tests \n"
+    README += response.tests + "\n";
+    README += "\n";
+
+    fs.writeFile('new-README.md', README, function (err) {
+    if (err) throw err;
+    console.log('Created new-README file!');
+  });
+});
