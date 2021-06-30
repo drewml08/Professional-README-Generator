@@ -1,8 +1,8 @@
-# name
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+# Readme Generator
+[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0) 
 
 ## Description 
-description
+generates readme for developers
 
 ## Table of Contents 
 - [Installation](#installation) 
@@ -12,19 +12,19 @@ description
 - [Tests](#tests) 
 
 ## Installation 
-install
+Install instructions
 
 ## Usage 
-usage info
+Usage info
 
 ## License 
-Apache
+Eclipse
 
 ## How to Contribute 
-contribute
+Contribution guidelines
 
 ## Tests 
-testing
+Testing info
 
 ## Questions 
-If you have any comments or questions you can contact profile at <12345@gmail.com> 
+If you have any comments or questions you can contact drewml08 at <drewml08@gmail.com> 
